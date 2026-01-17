@@ -1,6 +1,7 @@
 :root {
     --theme-color: #0080ff;
-    --background-color: #0080ff94;
+    --text-color: #000dff;
+    --background-color: #0080ff7b;
 }
 
 * {
@@ -30,11 +31,12 @@ body {
     background-color: #ffffff00;
     transition: box-shadow 0.3s ease;
     background-color: white;
+    z-index: 1;
 }
 
 .navbar.shadow {
     background-color: white;
-    box-shadow: 0px 5px 20px 1px #0080ff;
+    box-shadow: 0px 5px 20px 1px var(--theme-color);
 }
 
 .navbar i {
@@ -88,8 +90,11 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 3rem 2rem;
+    min-height: calc(100vh - 3rem);
     background-color: var(--background-color);
-    padding: 1rem 2rem;
+    color: white;
+    animation: fadeIn 0.8s ease-out both;
 }
 
 .hero-section .left {
@@ -97,15 +102,81 @@ main {
 }
 
 .hero-section .right {
-    background-color: #0080ff;
-    padding: 1rem 1rem;
-    border-radius: 1rem;
     width: 40%;
-
+    background-color: var(--theme-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    animation: float 4s ease-in-out infinite;
 }
 
 .hero-section img {
     width: 100%;
+    display: block;
+}
+
+.hero-section .left h3,
+.hero-section .left h1,
+.hero-section .left p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: textUp 0.6s ease-out forwards;
+    padding: 0.4rem;
+}
+
+.hero-section .left h3 {
+    animation-delay: 0.2s;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section .left h1 {
+    animation-delay: 0.4s;
+    color: #111111;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.hero-section .left p {
+    animation-delay: 0.6s;
+    color: #282828;
+    margin-top: 1.5rem;
+    max-width: 90%;
+    line-height: 1.6;
+}
+
+@keyframes textUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Hero CSS END */
@@ -120,7 +191,6 @@ main {
     /* Responsive Navbar CSS start */
     .navbar {
         /* overflow: hidden; */
-
     }
 
     .navbar .navbar-menu .fa-x {
