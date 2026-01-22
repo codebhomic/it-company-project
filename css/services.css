@@ -28,13 +28,13 @@
 }
 
 .services-section .services-body .services-card {
-    border: 2px solid grey;
+    border-radius: 1rem;
     padding: 2rem 1rem;
-    transition: transform 0.3s ease;
+    box-shadow: 0 0.8rem 2rem rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .services-section .services-body .services-card:hover {
-    border: 2px solid #000dff;
     padding: 2rem 1rem;
     box-shadow: 0px 10px 20px 1px var(--theme-color);
     transform: translateY(-5%);
