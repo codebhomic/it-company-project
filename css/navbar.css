@@ -34,6 +34,11 @@
     font-size: 2rem;
     color: var(--theme-color);
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar .container .navbar-left:hover {
+    color: #000dff;
 }
 
 .navbar .container .navbar-right {
