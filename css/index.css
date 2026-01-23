@@ -174,18 +174,23 @@ html {
     border-radius: 0.9rem;
     box-shadow: 0 0.8rem 2rem rgba(0,0,0,0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeUp 0.8s ease forwards;
+    animation: fadeUp 0.8s ease  1 forwards;
+    overflow: hidden;
 }
 
 /* Logo image */
 .brand img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 7rem;
     max-height: 5rem;
+}
+.brand img:hover{
+    transform: scale(1.2);
 }
 
 /* Hover interaction */
 .brand:hover {
-    transform: translateY(-0.4rem);
+    transform: scale(1.2);
     box-shadow: 0 0rem 1rem var(--theme-color);
 }
 

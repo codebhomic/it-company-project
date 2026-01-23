@@ -6,7 +6,8 @@
     align-items: center;
     padding: 3rem 2rem;
     min-height: calc(100vh - 3rem);
-    background-color: var(--background-color);
+    background-color: #e8e8e8;
+    /* background-color: var(--background-color); */
     color: white;
     animation: fadeIn 0.8s ease-out both;
 }
