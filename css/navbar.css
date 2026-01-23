@@ -4,9 +4,7 @@
     /* height: 4rem; */
     position: sticky;
     top: 0;
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
-    /* background-color: white; */
-    background-color: #e8e8e8;
+    transition: box-shadow 0.3s ease;
     margin: auto;
     z-index: 1;
 }
@@ -22,8 +20,8 @@
 
 .navbar.shadow {
     background-color: white;
-    /* box-shadow: 0px 5px 20px 1px var(--theme-color); */
-    box-shadow: 0px 3px #fff;
+    box-shadow: 0px 5px 20px 1px var(--theme-color);
+    /* box-shadow: 0px 3px #fff; */
 }
 
 .navbar i {

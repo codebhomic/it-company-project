@@ -1,31 +1,38 @@
-
 /* Hero CSS Start */
 .hero-section {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3rem 2rem;
     min-height: calc(100vh - 3rem);
-    background-color: #e8e8e8;
-    /* background-color: var(--background-color); */
+    background: linear-gradient(180deg, #f9fbff, #eef4ff);
     color: white;
     animation: fadeIn 0.8s ease-out both;
+    overflow: hidden;
 }
 
 .hero-section .left {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: start;
+    margin-top: 5rem; */
     width: 55%;
 }
 
 .hero-section .right {
     width: 40%;
-    background-color: var(--theme-color);
+    position: absolute;
+    right: 6rem;
+    background: linear-gradient(180deg, #f9fbff, #eef4ff);
     padding: 1.5rem;
     border-radius: 1rem;
     animation: float 4s ease-in-out infinite;
 }
 
 .hero-section img {
-    width: 100%;
+    width: 150%;
     display: block;
 }
 
@@ -39,6 +46,7 @@
 }
 
 .hero-section .left h3 {
+    font-family: "Archivo Black", sans-serif;
     animation-delay: 0.2s;
     color: var(--text-color);
     font-weight: 600;
@@ -97,6 +105,7 @@
 /* Hero CSS END */
 
 @media (max-width: 1024px) {
+
     /* Hero Section Responsive for less than 1024px Start */
     .hero-section {
         /* flex-direction: column-reverse; */
@@ -104,20 +113,26 @@
         min-height: calc(100vh - 3rem);
     }
 
-    .hero-section .left {
+    /* .hero-section .left {
         width: 100%;
-    }
+    } */
 
     .hero-section .right {
-        /* display: none; */
+        width: 40%;
+        position: absolute;
+        right: 2rem;
+    }
+
+    /* 
+    .hero-section .right {
         width: 80%;
         background-color: var(--theme-color);
         padding: 1.5rem;
         border-radius: 1rem;
-    }
+    } */
 
     .hero-section img {
-        width: 100%;
+        width: 125%;
         display: block;
     }
 
@@ -153,6 +168,7 @@
 }
 
 @media (max-width: 768px) {
+
     /* Hero Section Responsive for less than 768px Start */
     .hero-section {
         /* flex-direction: column-reverse; */
@@ -211,6 +227,7 @@
 
 /* Responsive design for 425px */
 @media (max-width: 550px) {
+
     /* Hero Section Responsive for less than 425px Start */
     .hero-section {
         /* flex-direction: column-reverse; */

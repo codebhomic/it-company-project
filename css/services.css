@@ -1,12 +1,12 @@
-
 /* Services Section Start */
 .services-section {
     padding: 4rem 2.5rem;
+    background: linear-gradient(180deg, #f9fbff, #eef4ff);
 }
 
 .services-section .services-header {
     text-align: center;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
 }
 
 .services-section .services-header h2 {
@@ -23,7 +23,7 @@
     max-width: 80vw;
     margin: auto;
     text-align: center;
-    gap: 1rem;
+    gap: 2rem;
     padding: 0.5rem 0;
 }
 
@@ -36,7 +36,7 @@
 
 .services-section .services-body .services-card:hover {
     padding: 2rem 1rem;
-    box-shadow: 0px 10px 20px 1px var(--theme-color);
+    box-shadow: 0px 10px 20px 1px #c6c6c6;
     transform: translateY(-5%);
 }
 
@@ -44,7 +44,6 @@
     width: 40%;
     min-width: 10rem;
 }
-
 /* Services Section End */
 
 /* Responsive design for 425px */

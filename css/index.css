@@ -8,10 +8,13 @@ html {
     font-size: 20px;
 }
 
+body{
+    background-color: #fff;
+}
+
 .intro-section {
     padding: 80px 100px;
     text-align: center;
-    background: linear-gradient(180deg, #f9fbff, #eef4ff);
     overflow: hidden;
 }
 
@@ -90,8 +93,8 @@ html {
 }
 
 .bg-desc {
-    padding: 2rem 0;
-    background: var(--theme-color);
+    padding: 4rem 0;
+    /* background: var(--theme-color); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,17 +112,26 @@ html {
 
 .bg-desc ul li {
     width: 40%;
-    max-width: 10rem;
+    max-width: 14rem;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #000000;
-    background-color: #649bff;
     border-radius: 5rem;
     padding: 0.4rem 0;
     margin: 0.2rem 0.4rem;
     text-transform: capitalize;
+    background-color: #d5d5d5;
+    filter: grayscale(100);
+    opacity: 0.6;
 }
+
+.bg-desc ul li:hover {
+    background-color: #97bcff;
+    filter: grayscale(0);
+    opacity: 1;
+}
+
 
 @keyframes slideFade {
     from {
