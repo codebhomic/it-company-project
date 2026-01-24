@@ -1,15 +1,14 @@
-
 /* Navbar CSS start */
 .navbar {
-    /* height: 4rem; */
     position: sticky;
     top: 0;
     transition: box-shadow 0.3s ease;
     margin: auto;
     z-index: 1;
+    background-color: white;
 }
 
-.navbar .container{
+.navbar .container {
     padding: 1.25rem 2rem;
     display: flex;
     align-items: center;
@@ -24,7 +23,7 @@
     /* box-shadow: 0px 3px #fff; */
 }
 
-.navbar i {
+.navbar .container i {
     color: var(--theme-color);
     display: inline;
 }
@@ -47,11 +46,11 @@
     /* gap: 2rem; */
 }
 
-.navbar-menu {
+.navbar .container .navbar-menu {
     display: none;
 }
 
-.navbar .navbar-right a {
+.navbar .container .navbar-right a {
     text-decoration: none;
     display: inline-block;
     margin: 0 0.5rem;
@@ -67,7 +66,7 @@
 /* .navbar .navbar-right a:active {
 } */
 
-.navbar .navbar-right a:hover {
+.navbar .container .navbar-right a:hover {
     border-bottom-color: var(--theme-color);
     color: var(--theme-color);
 }
@@ -82,13 +81,13 @@ main {
 
 /* Responsive Desgin start */
 @media (max-width: 1024px) {
-    .navbar .navbar-menu .fa-x {
+    .navbar .container .navbar-menu .fa-x {
         display: none;
     }
 
-    .navbar .navbar-right {
+    .navbar .container .navbar-right {
         position: fixed;
-        top: 4.9rem;
+        top: 4.1rem;
         right: 0;
         width: 100vw;
         max-width: 360px;
@@ -104,28 +103,32 @@ main {
         transition: transform 0.5s ease-in;
     }
 
-    .navbar .navbar-right.show {
+    .navbar .container .navbar-right.show {
         transform: translatex(0%);
     }
 
-    .navbar .navbar-right a {
+    .navbar .container .navbar-right a {
         font-size: 1.1rem;
         color: #eeeeee;
         padding: 0.5rem 0;
     }
 
-    .navbar .navbar-right a:hover {
+    .navbar .container .navbar-right a:hover {
         border-bottom-color: #ffffff;
         color: #ffffff;
     }
 
-    .navbar-menu {
+    .navbar .container .navbar-menu {
         height: 100%;
         font-size: large;
         display: flex;
         justify-content: center;
         align-items: center;
-    }    
+    }
+
+    .navbar .container .navbar-left {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {

@@ -117,49 +117,198 @@
             <div class="brand"><img src="images/hero.png" alt="brand"></div>
         </div>
     </section>
-    <!-- Faq -->
-    <!-- <section class="faq">
-        <h2>Frequently Asked Questions</h2>
 
-        <div class="faq-item">
-            <button class="faq-question">
-                How long before we see results?
-            </button>
-            <div class="faq-answer">
-                Results usually start within 30–45 days.
-                Paid ads deliver faster. SEO compounds long-term.
+    <section class="faq">
+        <div class="container">
+            <div class="faq-head">
+                <h3>Frequently Asked Questions</h3>
+                <p>Get AI-powered Growth Marketing services that drive more leads, customers, and revenue to your
+                    business.</p>
+            </div>
+            <div class="accordion-lists">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        How long does it take to see results?
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            Paid campaigns usually show traction within 2-4 weeks.
+                            SEO and organic growth take 60-90 days to compound.
+                            Anyone promising instant results is not being honest.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        Do you guarantee leads or sales?
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            We don't sell fake guarantees.
+                            We guarantee strategy, execution, tracking, and continuous optimization.
+                            Performance depends on market, offer, and budget.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        What kind of businesses do you work with?
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            We work with startups, local businesses, and growing brands
+                            that have a clear product or service and realistic expectations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        How is success measured?
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            We track meaningful metrics like leads, cost per acquisition,
+                            conversion rate, and ROI — not vanity numbers like likes or reach.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        How do you price your services?
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            Pricing depends on your goals, competition, ad spend, and scope of work.
+                            We don't offer one-size-fits-all packages.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        What makes you different from other agencies?
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            We focus on ROI, not activities.
+                            Every campaign is backed by data, tested regularly,
+                            and optimized for real business growth.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        Will I get reports and updates?
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            Yes. You'll receive clear performance reports and insights
+                            so you always know what's working and what's being improved.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        Can I stop or change services anytime?
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            Yes. We believe in flexibility.
+                            Services can be scaled, adjusted, or paused based on performance
+                            and business needs.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                Do you guarantee sales or leads?
-            </button>
-            <div class="faq-answer">
-                We don’t sell fake guarantees.
-                We guarantee strategy, execution, tracking, and optimization.
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                What makes you different from other agencies?
-            </button>
-            <div class="faq-answer">
-                We focus on ROI, not vanity metrics.
-                Every campaign is tracked, tested, and scaled using data.
-            </div>
-        </div>
-    </section> -->
-
-
-    <section class="showup-section">
-
     </section>
-    <main>
+
+    <script>
+        const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener("click", () => {
+                // Check if the clicked header is already active
+                const isActive = header.classList.contains("active");
+                // Close all accordion items
+                accordionHeaders.forEach(item => {
+                    item.classList.remove("active");
+                    item.setAttribute("aria-expanded", "false");
+                });
+                // If it wasn't already active, open the clicked item
+                if (!isActive) {
+                    header.classList.add("active");
+                    header.setAttribute("aria-expanded", "true");
+                }
+            });
+        });
+
+    </script>
+
+    <section class="contact-section">
+        <div class="container">
+
+            <div class="contact-heading">
+                <h3>Contact Us</h3>
+                <p>Have a project in mind? Let's talk and see how we can help.</p>
+            </div>
+
+            <div class="contact-content">
+
+                <!-- Contact Details -->
+                <div class="contact-details">
+                    <p><strong>Phone:</strong> +91 98249 82498</p>
+                    <p><strong>Email:</strong> email@mail.com</p>
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113579.76975425675!2d77.98001294999999!3d27.1761745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39740d857c2f41d9%3A0x784aef38a9523b42!2sAgra%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1769201151266!5m2!1sen!2sin"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form" method="post" action="">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
 
 
-    </main>
     <footer>
         <div class="footer-links">
             <div class="footer-title">

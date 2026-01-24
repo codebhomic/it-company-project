@@ -2,13 +2,14 @@
 @import url('navbar.css');
 @import url('hero.css');
 @import url('services.css');
+@import url('contact.css');
 @import url('footer.css');
 
 html {
     font-size: 20px;
 }
 
-body{
+body {
     background-color: #fff;
 }
 
@@ -184,9 +185,9 @@ body{
     padding: 1.2rem 1rem;
     background: #ffffff;
     border-radius: 0.9rem;
-    box-shadow: 0 0.8rem 2rem rgba(0,0,0,0.06);
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeUp 0.8s ease  1 forwards;
+    animation: fadeUp 0.8s ease 1 forwards;
     overflow: hidden;
 }
 
@@ -196,7 +197,8 @@ body{
     max-width: 7rem;
     max-height: 5rem;
 }
-.brand img:hover{
+
+.brand img:hover {
     transform: scale(1.2);
 }
 
@@ -211,6 +213,7 @@ body{
         opacity: 0;
         transform: translateY(1rem);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -263,41 +266,94 @@ body{
     }
 }
 
-
 .faq {
-    padding: var(--padding-section);
-    background: var(--theme-color);
-    color: var(--white);
+    padding: 4rem 0;
+    background: linear-gradient(180deg, #f9fbff, #eef4ff);
 }
 
-.faq h2 {
+.faq .faq-head {
     text-align: center;
-    margin-bottom: 40px;
 }
 
-.faq-item {
-    max-width: 800px;
-    margin: 0 auto 20px;
-    background: var(--white);
-    border-radius: var(--radius);
-    overflow: hidden;
-}
-
-.faq-question {
-    width: 100%;
-    padding: 20px;
-    background: none;
-    border: none;
-    text-align: left;
-    font-weight: bold;
+.faq .faq-head h3 {
+    font-size: 2rem;
+    font-weight: 600;
     color: var(--dark);
-    cursor: pointer;
+    text-transform: capitalize;
+    padding-bottom: 0.5rem;
 }
 
-.faq-answer {
-    padding: 0 20px 20px;
-    color: var(--text-color);
-    display: none;
+.faq .faq-head p {
+    color: var(--dark);
+    text-transform: capitalize;
+    padding-bottom: 0.5rem;
+}
+
+.faq .container {
+    padding: 1.25rem 2rem;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.faq .accordion-lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 15px;
+    background-color: #d2e2ff; 
+    /* eef4ff */
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.accordion-header {
+    background-color: #d2e2ff;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.2s;
+}
+
+.accordion-header:hover {
+    background-color: #a8c6ff;
+}
+
+.accordion-header.active {
+    background-color: #a8c6ff;
+}
+
+.accordion-header.active+.accordion-content {
+    max-height: 200px;
+    padding: 15px;
+}
+
+@media (max-width: 800px) {
+
+    .faq .faq-head h3 {
+        font-size: 1.4rem;
+    }
+
+    .faq .faq-head p {
+        font-size: 0.95rem;
+    }
+
+    .faq .accordion-lists {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+
 }
 
 /* Responsive Desgin start */
